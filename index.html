@@ -2,14 +2,79 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Tic-Tac-Toe</title
+  <title>Tic-Tac-Toe|Captain America</title>
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/foundation/6.2.0/foundation.min.css">
+   <link rel="stylesheet" href="css/style.css">
+
 </head>
 <body>
-  <h1>
+  <div class="headerone">
+    <h1 class="h1">
+      Captain America: Civil War Tic-Tac-Toe
+    </h1>
+  </div>
+        <h2><span><img class="iron"src="file:///Users/PMW/Desktop/Screen%20Shot%202016-04-01%20at%202.39.47%20PM.png"></span>Whose side are you on?<span><img class="iron" src="file:///Users/PMW/Desktop/Screen%20Shot%202016-04-01%20at%202.40.03%20PM.png"></span></h2>
 
-  </h1>
-    <p>
+    <div class="list">
+      <ol>
+        <li>Choose either Captain America or Iron Man's team.</li>
+        <li>The object of Tic Tac Toe is to get three in a row.</li>
+        <li>If there are two players, the youngest goes first.</li>
+        <li>First player begins by selecting which square they want to claim and click on that square.</li>
+        <li>Alternate turns claiming squares until either oppent has three in a row or all nine squares are filled.</li>
+        <li>If a stalemate occurs, click reset and begin again.</li>
+        <li>Best of 5 games, wins.</li>
+      </ol>
+    </div>
 
-    </p>
+  <section id="main">
+
+    <div class="row">
+        <div class="small-2 large-2 columns">
+            <img class="cap" src="http://img14.deviantart.net/74dc/i/2015/365/b/0/captain_america_tfa___transparent_by_thearrowverse-d9m79bx.png">
+        </div>
+
+        <div class="small-8 large-8 columns">
+            <section class="gameboard">
+               <div id="board">
+                 <table>
+                  <tbody id="borders">
+                    <tr id="row1">
+                       <td class="square"></td>
+                       <td class="square vertical"></td>
+                       <td class="square"></td>
+                    </tr>
+                    <tr id="row2">
+                        <td class="square horizontal"></td>
+                        <td class="square vertical horizontal"></td>
+                        <td class="square horizontal"></td>
+                    </tr>
+                    <tr id="row3">
+                       <td class="square"></td>
+                       <td class="square vertical"></td>
+                       <td class="square"></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+          </section>
+        </div>
+        <div class="small-2 large-2 columns">
+          <img class="ironman" src="http://img11.deviantart.net/e747/i/2015/365/c/a/iron_man___transparent_by_thearrowverse-d9m7gcu.png" alt="">
+        </div>
+    </div>
+
+      <div class="score">
+        <ul id="players">
+          <li>Player 1</li>
+          <li>Player 2</li>
+          <li>Ties</li>
+        </ul>
+      </div>
+
+  </section>
+  <footer>
+
+  </footer>
 </body>
 </html>

@@ -1,0 +1,109 @@
+body {
+  background-color: #0033cc;
+  color: white;
+}
+
+.h1{
+  font-family: 'American Captain';
+  font-size: 100px;
+  text-align: center;
+  font-size: 70px;
+  margin-top: 0px;
+  text-shadow: -1px 0 black, 0 3px black, 3px 0 black, 0 -1px black;
+  padding-top: 100px;
+}
+
+h2 {
+  text-align: center;
+  font-family: 'Marvel';
+  font-size: 50px;
+  padding-top: 30px;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.iron {
+  width: 50px;
+  padding: 0px 8px 0px 8px;
+}
+.list {
+  width: 500px;
+  margin: auto;
+  padding-top: 2px;
+  padding-bottom: 30px;
+}
+li {
+  font-family: 'Marvel';
+  padding: .5px;
+  font-size: 20px;
+}
+
+.gameboard {
+  width: 316px;
+  margin: auto;
+}
+
+.headerone {
+  /*background-image: url(file:///Users/PMW/Desktop/Screen%20Shot%202016-04-01%20at%202.21.40%20PM.png);*/
+  background-position: center top;
+  height: 300px;
+  margin-top: 0px;
+}
+
+
+
+.square{
+    width:100px;
+    height:100px;
+    background-color: #0033cc;
+}
+
+.vertical {
+    border-left:1px solid white;
+    border-right:1px solid white;
+}
+
+.horizontal {
+    border-top:1px solid white;
+    border-bottom:1px solid white;
+}
+
+#board {
+  width: 316px;
+  border-top: black;
+}
+
+.ironman {
+  height: 220px;
+  float: right;
+}
+
+.cap {
+  height: 220px;
+  float: left;
+}
+
+.fill {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden
+}
+.fill img {
+    flex-shrink:0;
+    min-width:100%;
+    min-height:100%
+}
+#borders {
+  border: none;
+}
+
+
+#players {
+  text-align: center;
+  text-decoration: none;
+  display: inline;
+}
+
+
+
+
