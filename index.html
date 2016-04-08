@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
   <meta charset="UTF-8">
   <title>Tic-Tac-Toe|Captain America</title>
    <link rel="stylesheet" href="https://cdn.jsdelivr.net/foundation/6.2.0/foundation.min.css">
    <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
 
 </head>
 <body>
@@ -29,7 +31,6 @@
            <span><img id="cap1" src="http://all4desktop.com/data_images/original/4246066-captain-america.jpg"></span>
            </h3>
             <ol>
-              <li>Choose either Captain America or Iron Man's team.</li>
               <li>The object of Tic Tac Toe is to get three in a row.</li>
               <li>If there are two players, the youngest goes first.</li>
               <li>First player begins by selecting which square they want to claim and click on that square.</li>
@@ -45,10 +46,10 @@
        <img id="cap2" src="http://vignette3.wikia.nocookie.net/marvelcinematicuniverse/images/6/67/Captain_America_TWS-flying_air_kick.png/revision/latest?cb=20150411122733">
     <div class="row">
         <div class="small-2 large-2 columns">
-
+          <div id="button2">
+              <!-- <a class=" button ">Choose Captain America's team!</a> -->
+          </div>
         </div>
-
-        <div class="small-8 large-8 columns">
             <section class="gameboard">
                <div id="board">
                  <table>
@@ -77,7 +78,9 @@
           </section>
         </div>
         <div class="small-2 large-2 columns">
-
+          <div id="button3">
+            <!-- <a class=" button ">Choose Ironman's team!</a> -->
+          </div>
         </div>
     </div>
 
@@ -93,5 +96,8 @@
   <footer>
 
   </footer>
+
+  <script src="javascript/script.js"></script>
+
 </body>
 </html>

@@ -182,3 +182,59 @@ iron2 {
   padding-top: 20px;
 }
 
+#button2 {
+  position: absolute;
+  left: 130px;
+  top: 386px;
+}
+
+#button3 {
+  position: absolute;
+  right: 210px;
+  top: 386px;
+}
+
+.middleleft:hover {
+  background-color: #CF252B;
+  opacity: .75;
+}
+
+.topleft:hover {
+  background-color: #CF252B;
+  opacity: .75;
+}
+
+.topmiddle:hover {
+  background-color: #CF252B;
+  opacity: .75;
+}
+
+.topright:hover {
+  background-color: #CF252B;
+  opacity: .75;
+}
+
+.middlemiddle:hover {
+  background-color: #CF252B;
+  opacity: .75;
+}
+
+.middleright:hover {
+  background-color: #CF252B;
+  opacity: .75;
+}
+
+.bottomleft:hover {
+  background-color: #CF252B;
+  opacity: .75;
+}
+
+.bottommiddle:hover {
+  background-color: #CF252B;
+  opacity: .75;
+}
+
+.bottomright:hover {
+  background-color: #CF252B;
+  opacity: .75;
+}
