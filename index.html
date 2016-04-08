@@ -13,25 +13,39 @@
       Captain America: Civil War Tic-Tac-Toe
     </h1>
   </div>
-        <h2><span><img class="iron"src="file:///Users/PMW/Desktop/Screen%20Shot%202016-04-01%20at%202.39.47%20PM.png"></span>Whose side are you on?<span><img class="iron" src="file:///Users/PMW/Desktop/Screen%20Shot%202016-04-01%20at%202.40.03%20PM.png"></span></h2>
+      <div id="headertwo">
+        <h2>
+            <span><img class="shield" src="https://s-media-cache-ak0.pinimg.com/736x/53/94/bf/5394bf048c9fd2afae4327a1a6b54490.jpg"></span>
+              Whose side are you on?
+            <span><img class="shield" src="http://ecx.images-amazon.com/images/I/612orNhcKnL._SL1500_.jpg"></span>
+        </h2>
+      </div>
 
-    <div class="list">
-      <ol>
-        <li>Choose either Captain America or Iron Man's team.</li>
-        <li>The object of Tic Tac Toe is to get three in a row.</li>
-        <li>If there are two players, the youngest goes first.</li>
-        <li>First player begins by selecting which square they want to claim and click on that square.</li>
-        <li>Alternate turns claiming squares until either oppent has three in a row or all nine squares are filled.</li>
-        <li>If a stalemate occurs, click reset and begin again.</li>
-        <li>Best of 5 games, wins.</li>
-      </ol>
+    <div id="listdiv">
+      <div class="list">
+        <h3>
+           <span><img id="ironman1" src="http://all4desktop.com/data_images/original/4243202-iron-man.jpg"></span>
+           Rules
+           <span><img id="cap1" src="http://all4desktop.com/data_images/original/4246066-captain-america.jpg"></span>
+           </h3>
+            <ol>
+              <li>Choose either Captain America or Iron Man's team.</li>
+              <li>The object of Tic Tac Toe is to get three in a row.</li>
+              <li>If there are two players, the youngest goes first.</li>
+              <li>First player begins by selecting which square they want to claim and click on that square.</li>
+              <li>Alternate turns claiming squares until either oppent has three in a row or all nine squares are filled.</li>
+              <li>If a stalemate occurs, click reset and begin again.</li>
+              <li>Best of 5 games, wins.</li>
+            </ol>
+          </div>
     </div>
 
-  <section id="main">
-
+<section id="main">
+       <img id="iron2" src="http://vignette3.wikia.nocookie.net/marvelmovies/images/a/a4/Civil_War_Full_Body_08.png/revision/latest/scale-to-width-down/613?cb=20160326231158">
+       <img id="cap2" src="http://vignette3.wikia.nocookie.net/marvelcinematicuniverse/images/6/67/Captain_America_TWS-flying_air_kick.png/revision/latest?cb=20150411122733">
     <div class="row">
         <div class="small-2 large-2 columns">
-            <img class="cap" src="http://img14.deviantart.net/74dc/i/2015/365/b/0/captain_america_tfa___transparent_by_thearrowverse-d9m79bx.png">
+
         </div>
 
         <div class="small-8 large-8 columns">
@@ -40,35 +54,38 @@
                  <table>
                   <tbody id="borders">
                     <tr id="row1">
-                       <td class="square"></td>
-                       <td class="square vertical"></td>
-                       <td class="square"></td>
+                       <td class="square topleft"></td>
+                       <td class="square vertical topmiddle"></td>
+                       <td class="square topright"></td>
                     </tr>
                     <tr id="row2">
-                        <td class="square horizontal"></td>
-                        <td class="square vertical horizontal"></td>
-                        <td class="square horizontal"></td>
+                        <td class="square horizontal middleleft"></td>
+                        <td class="square vertical horizontal middlemiddle"></td>
+                        <td class="square horizontal middleright"></td>
                     </tr>
                     <tr id="row3">
-                       <td class="square"></td>
-                       <td class="square vertical"></td>
-                       <td class="square"></td>
+                       <td class="square bottomleft"></td>
+                       <td class="square vertical bottommiddle"></td>
+                       <td class="square bottomright"></td>
                     </tr>
                   </tbody>
                 </table>
               </div>
+                <div id="button1">
+                  <a class=" button ">Reset the Game!</a>
+                </div>
           </section>
         </div>
         <div class="small-2 large-2 columns">
-          <img class="ironman" src="http://img11.deviantart.net/e747/i/2015/365/c/a/iron_man___transparent_by_thearrowverse-d9m7gcu.png" alt="">
+
         </div>
     </div>
 
       <div class="score">
         <ul id="players">
-          <li>Player 1</li>
-          <li>Player 2</li>
-          <li>Ties</li>
+          <li class="bottomtext">Player 1</li>
+          <li class="bottomtext">Player 2</li>
+          <li class="bottomtext">Ties</li>
         </ul>
       </div>
 
