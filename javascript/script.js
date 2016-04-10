@@ -6,9 +6,13 @@
     //Based on if they are player 1 or player 2, that image will be placed in the square when they click on it.
 
 
-
 var currentPlayer = 1;
 
+var board = ['square1', 'square2', 'square3',
+             "square4", "square5", "square6",
+             "square7", "square8", "square9"];
+
+// Switch Player Function
 function switchPlayer(buttonClickedId) {
   if (buttonClickedId !== currentPlayer) {
      if (currentPlayer === 1) {
@@ -18,380 +22,279 @@ function switchPlayer(buttonClickedId) {
         currentPlayer = 1;
       }
     }
-}
+};
 
 
-//User Moves
+//Function to check if square is available
+
+// Show image
+function showImage() {
+  if (currentPlayer === 1) {
+  } else if (currentPlayer === 2) {
+  }
+};
 
 function checkSquareAvailability(square) {
-
-  if (square.html() !== "") {
-    return false;
-  }
-  else {
-    return true;
+  if (!square.innerHTML) {
+    showImage();
+  } else {
+    return alert("This square has already been selected. Choose again.");
   }
 }
 
 
-$(".topleft").click(function(){
+function playerMove(square, location) {
+checkSquareAvailability(square);
+location.innerHTML = showImage();
+playerClick(square);
+};
 
-  if (checkSquareAvailability($(this)) == true ) {
-    if (currentPlayer == 1) {
-   $('.topleft').prepend('<img id="Captain_America_Shield" src="http://vignette2.wikia.nocookie.net/disney/images/3/36/Captain_America_Shield.png/revision/latest?cb=20140922001028" />');
-  } else if (currentPlayer == 2) {
-   $('.topleft').prepend('<img id=Ironman_logo" src="http://vignette4.wikia.nocookie.net/marvel-cinematic-universe/images/1/12/Era-Ironman.png/revision/latest?cb=20120621162852" />')
-  }
-   switchPlayer();
-}
-
-});
-$(".topmiddle").click(function(){
-
-  if (checkSquareAvailability($(this)) == true ) {
-    if (currentPlayer == 1) {
-   $('.topmiddle').prepend('<img id="Captain_America_Shield" src="http://vignette2.wikia.nocookie.net/disney/images/3/36/Captain_America_Shield.png/revision/latest?cb=20140922001028" />');
-  } else if (currentPlayer == 2) {
-   $('.topmiddle').prepend('<img id=Ironman_logo" src="http://vignette4.wikia.nocookie.net/marvel-cinematic-universe/images/1/12/Era-Ironman.png/revision/latest?cb=20120621162852" />')
-  }
-   switchPlayer();
-}
-
-});
-
-$(".topright").click(function(){
-
-  if (checkSquareAvailability($(this)) == true ) {
-    if (currentPlayer == 1) {
-   $('.topright').prepend('<img id="Captain_America_Shield" src="http://vignette2.wikia.nocookie.net/disney/images/3/36/Captain_America_Shield.png/revision/latest?cb=20140922001028" />');
-  } else if (currentPlayer == 2) {
-   $('.topright').prepend('<img id=Ironman_logo" src="http://vignette4.wikia.nocookie.net/marvel-cinematic-universe/images/1/12/Era-Ironman.png/revision/latest?cb=20120621162852" />')
-  }
-   switchPlayer();
-}
-
-});
-
-$(".middleleft").click(function(){
-
-  if (checkSquareAvailability($(this)) == true ) {
-    if (currentPlayer == 1) {
-   $('.middleleft').prepend('<img id="Captain_America_Shield" src="http://vignette2.wikia.nocookie.net/disney/images/3/36/Captain_America_Shield.png/revision/latest?cb=20140922001028" />');
-  } else if (currentPlayer == 2) {
-   $('.middleleft').prepend('<img id=Ironman_logo" src="http://vignette4.wikia.nocookie.net/marvel-cinematic-universe/images/1/12/Era-Ironman.png/revision/latest?cb=20120621162852" />')
-  }
-   switchPlayer();
-}
-
-});
-
-$(".middlemiddle").click(function(){
-
-  if (checkSquareAvailability($(this)) == true ) {
-    if (currentPlayer == 1) {
-   $('.middlemiddle').prepend('<img id="Captain_America_Shield" src="http://vignette2.wikia.nocookie.net/disney/images/3/36/Captain_America_Shield.png/revision/latest?cb=20140922001028" />');
-  } else if (currentPlayer == 2) {
-   $('.middlemiddle').prepend('<img id=Ironman_logo" src="http://vignette4.wikia.nocookie.net/marvel-cinematic-universe/images/1/12/Era-Ironman.png/revision/latest?cb=20120621162852" />')
-  }
-   switchPlayer();
-}
-
-});
-
-$(".middleright").click(function(){
-
-  if (checkSquareAvailability($(this)) == true ) {
-    if (currentPlayer == 1) {
-   $('.middleright').prepend('<img id="Captain_America_Shield" src="http://vignette2.wikia.nocookie.net/disney/images/3/36/Captain_America_Shield.png/revision/latest?cb=20140922001028" />');
-  } else if (currentPlayer == 2) {
-   $('.middleright').prepend('<img id=Ironman_logo" src="http://vignette4.wikia.nocookie.net/marvel-cinematic-universe/images/1/12/Era-Ironman.png/revision/latest?cb=20120621162852" />')
-  }
-   switchPlayer();
-}
-
-});
-
-$(".bottomleft").click(function(){
-
-  if (checkSquareAvailability($(this)) == true ) {
-    if (currentPlayer == 1) {
-   $('.bottomleft').prepend('<img id="Captain_America_Shield" src="http://vignette2.wikia.nocookie.net/disney/images/3/36/Captain_America_Shield.png/revision/latest?cb=20140922001028" />');
-  } else if (currentPlayer == 2) {
-   $('.bottomleft').prepend('<img id=Ironman_logo" src="http://vignette4.wikia.nocookie.net/marvel-cinematic-universe/images/1/12/Era-Ironman.png/revision/latest?cb=20120621162852" />')
-  }
-   switchPlayer();
-}
-
-});
-
-$(".bottommiddle").click(function(){
-
-  if (checkSquareAvailability($(this)) == true ) {
-    if (currentPlayer == 1) {
-   $('.bottommiddle').prepend('<img id="Captain_America_Shield" src="http://vignette2.wikia.nocookie.net/disney/images/3/36/Captain_America_Shield.png/revision/latest?cb=20140922001028" />');
-  } else if (currentPlayer == 2) {
-   $('.bottommiddle').prepend('<img id=Ironman_logo" src="http://vignette4.wikia.nocookie.net/marvel-cinematic-universe/images/1/12/Era-Ironman.png/revision/latest?cb=20120621162852" />')
-  }
-   switchPlayer();
-}
-
-});
-
-$(".bottomright").click(function(){
-
-  if (checkSquareAvailability($(this)) == true ) {
-    if (currentPlayer == 1) {
-   $('.bottomright').prepend('<img id="Captain_America_Shield" src="http://vignette2.wikia.nocookie.net/disney/images/3/36/Captain_America_Shield.png/revision/latest?cb=20140922001028" />');
-  } else if (currentPlayer == 2) {
-   $('.bottomright').prepend('<img id=Ironman_logo" src="http://vignette4.wikia.nocookie.net/marvel-cinematic-universe/images/1/12/Era-Ironman.png/revision/latest?cb=20120621162852" />')
-  }
-  player1Click();
-  player2Click();
+var square1 = $(".topleft");
+  $(square1).click(function(){
+    playerMove("square1", square1);
+  checkWinner();
   switchPlayer();
-}
-
 });
 
- // function squareIsUnavailable() {
- //    alert("Sorry, that square is taken! Try again.");
- //  }
+var square2 = $(".topmiddle");
+  $(square2).click(function(){
+    playerMove("square2", square2);
+  checkWinner();
+  switchPlayer();
+});
 
+var square3 = $(".topright");
+  $(square3).click(function(){
+    playerMove("square3", square3);
+  checkWinner();
+  switchPlayer();
+});
 
+var square4 = $(".middleleft");
+  $(square4).click(function(){
+    playerMove("square4", square4);
+  checkWinner();
+  switchPlayer();
+});
 
-//Player Score
+var square5 = $(".middlemiddle");
+  $(square5).click(function(){
+    playerMove("square5", square5);
+  checkWinner();
+  switchPlayer();
+});
 
-// playerScore = 0
+var square6 = $(".middleright");
+  $(square6).click(function(){
+    playerMove("square6", square6);
+  checkWinner();
+  switchPlayer();
+});
 
+var square7 = $(".bottomleft");
+  $(square7).click(function(){
+    playerMove("square7", square7);
+  checkWinner();
+  switchPlayer();
+});
 
-function player1Click(square){
-  if (currentPlayer == 1 && square === 'board[0]'){
-    if (board[0] === null){
-      board[0] = 5;
-      $('#topleftbox').addClass('boxred');
-      checkWinner();
+var square8 = $(".bottommiddle");
+  $(square8).click(function(){
+    playerMove("square8", square8);
+  checkWinner();
+  switchPlayer();
+});
+
+var square9 = $(".bottomright");
+  $(square9).click(function(){
+    playerMove("square9", square9);
+  checkWinner();
+  switchPlayer();
+});
+
+//player moves
+function playerClick(square){
+  if (square === 'square1'){
+    if (currentPlayer === 1) {
+      if (board[0] === 'square1'){
+        board[0] = 5
+        $(".topleft").append("<img src='http://vignette2.wikia.nocookie.net/disney/images/3/36/Captain_America_Shield.png/revision/latest?cb=20140922001028'>");
+        showImage();
+    }
+  } else if (currentPlayer !== 1) {
+      if (board[0] === 'square1') {
+        board[0] = 1
+        $(".topleft").append("<img src='http://vignette4.wikia.nocookie.net/marvel-cinematic-universe/images/1/12/Era-Ironman.png/revision/latest?cb=20120621162852'>");
+      }
+     }
+  } else if (square === 'square2'){
+    if (currentPlayer === 1){
+      if (board[1] === 'square2') {
+        board[1] = 5
+        $(".topmiddle").append("<img src='http://vignette2.wikia.nocookie.net/disney/images/3/36/Captain_America_Shield.png/revision/latest?cb=20140922001028'>");
+      }
+    } else if (currentPlayer !== 1) {
+      if (board[1] === 'square2') {
+        board[1] = 1
+        $(".topmiddle").append("<img src='http://vignette4.wikia.nocookie.net/marvel-cinematic-universe/images/1/12/Era-Ironman.png/revision/latest?cb=20120621162852'>");
+      }
+    }
+  } else if (square === 'square3'){
+    if (currentPlayer === 1) {
+      if (board[2] === 'square3'){
+        board[2] = 5
+         $(".topright").append("<img src='http://vignette2.wikia.nocookie.net/disney/images/3/36/Captain_America_Shield.png/revision/latest?cb=20140922001028'>");
+    }
+  } else if (currentPlayer !== 1) {
+      if (board[2] === 'square3') {
+        board[2] = 1
+        $(".topright").append("<img src='http://vignette4.wikia.nocookie.net/marvel-cinematic-universe/images/1/12/Era-Ironman.png/revision/latest?cb=20120621162852'>");
+      }
+     }
+  } else if (square === 'square4') {
+    if (currentPlayer === 1) {
+      if (board[3] === 'square4'){
+        board[3] = 5
+         $(".middleleft").append("<img src='http://vignette2.wikia.nocookie.net/disney/images/3/36/Captain_America_Shield.png/revision/latest?cb=20140922001028'>");
+      }
+    } else if (currentPlayer !== 1) {
+      if (board[3] === 'square4') {
+        board[3] = 1
+        $(".middleleft").append("<img src='http://vignette4.wikia.nocookie.net/marvel-cinematic-universe/images/1/12/Era-Ironman.png/revision/latest?cb=20120621162852'>");
+      }
+    }
+  } else if (square === 'square5') {
+    if (currentPlayer === 1) {
+      if (board[4] === 'square5'){
+        board[4] = 5
+         $(".middlemiddle").append("<img src='http://vignette2.wikia.nocookie.net/disney/images/3/36/Captain_America_Shield.png/revision/latest?cb=20140922001028'>");
+      }
+    } else if (currentPlayer !== 1) {
+      if (board[4] === 'square5') {
+        board[4] = 1
+        $(".middlemiddle").append("<img src='http://vignette4.wikia.nocookie.net/marvel-cinematic-universe/images/1/12/Era-Ironman.png/revision/latest?cb=20120621162852'>");
+      }
+    }
+  } else if(square === 'square6') {
+    if (currentPlayer === 1) {
+      if (board[5] === 'square6'){
+        board[5] = 5
+         $(".middleright").append("<img src='http://vignette2.wikia.nocookie.net/disney/images/3/36/Captain_America_Shield.png/revision/latest?cb=20140922001028'>");
+      }
+    } else if (currentPlayer !== 1) {
+      if (board[5] === 'square6') {
+        board[5] = 1
+        $(".middleright").append("<img src='http://vignette4.wikia.nocookie.net/marvel-cinematic-universe/images/1/12/Era-Ironman.png/revision/latest?cb=20120621162852'>");
+      }
+    }
+  } else if (square === 'square7') {
+    if (currentPlayer === 1) {
+      if (board[6] === 'square7'){
+        board[6] = 5
+         $(".bottomleft").append("<img src='http://vignette2.wikia.nocookie.net/disney/images/3/36/Captain_America_Shield.png/revision/latest?cb=20140922001028'>");
+      }
+    } else if (currentPlayer !== 1) {
+      if (board[6] === 'square7') {
+        board[6] = 1
+        $(".bottomleft").append("<img src='http://vignette4.wikia.nocookie.net/marvel-cinematic-universe/images/1/12/Era-Ironman.png/revision/latest?cb=20120621162852'>");
+      }
+    }
+  } else if (square === 'square8') {
+    if (currentPlayer === 1) {
+      if (board[7] === 'square8'){
+        board[7] = 5
+         $(".bottommiddle").append("<img src='http://vignette2.wikia.nocookie.net/disney/images/3/36/Captain_America_Shield.png/revision/latest?cb=20140922001028'>");
+      }
+    } else if (currentPlayer !== 1) {
+      if (board[7] === 'square8') {
+        board[7] = 1
+        $(".bottommiddle").append("<img src='http://vignette4.wikia.nocookie.net/marvel-cinematic-universe/images/1/12/Era-Ironman.png/revision/latest?cb=20120621162852'>");
+      }
+    }
+  } else if  (square === 'square9') {
+    if (currentPlayer === 1) {
+      if (board[8] === 'square9'){
+        board[8] = 5
+         $(".bottomright").append("<img src='http://vignette2.wikia.nocookie.net/disney/images/3/36/Captain_America_Shield.png/revision/latest?cb=20140922001028'>");
+      }
+    } else if (currentPlayer !== 1) {
+      if (board[8] = 'square9') {
+        board[8] = 1
+        $(".bottomright").append("<img src='http://vignette4.wikia.nocookie.net/marvel-cinematic-universe/images/1/12/Era-Ironman.png/revision/latest?cb=20120621162852'>");
+      }
     }
   }
-
-  else if (currentPlayer == 1 && square === 'board[1]'){
-    if (board[1] === null){
-      board[1] = 5;
-      $('#topleftbox').addClass('boxred');
-      checkWinner();
-    }
-  }
-
-  else if (currentPlayer == 1 && square === 'board[2]'){
-    if (board[2] === null){
-      board[2] = 5;
-      $('#topleftbox').addClass('boxred');
-      checkWinner();
-    }
-  }
-
-  else if (currentPlayer == 1 && square === 'board[3]'){
-    if (board[3] === null){
-      board[3] = 5;
-      $('#topleftbox').addClass('boxred');
-      checkWinner();
-    }
-  }
-
-  else if (currentPlayer == 1 && square === 'board[4]'){
-    if (board[4] === null){
-      board[4] = 5;
-      $('#topleftbox').addClass('boxred');
-      checkWinner();
-    }
-  }
-
-  else if (currentPlayer == 1 && square === 'board[5]'){
-    if (board[5] === null){
-      board[5] = 5;
-      $('#topleftbox').addClass('boxred');
-      checkWinner();
-    }
-  }
-  else if (currentPlayer == 1 && square === 'board[6]'){
-    if (board[6] === null){
-      board[6] = 5;
-      $('#topleftbox').addClass('boxred');
-      checkWinner();
-    }
-  }
-
-  else if (currentPlayer == 1 && square === 'board[7]'){
-    if (board[7] === null){
-      board[7] = 5;
-      $('#topleftbox').addClass('boxred');
-      checkWinner();
-    }
-  }
-
-  else if (currentPlayer == 1 && square === 'board[8]'){
-    if (board[8] === null){
-      board[8] = 5;
-      $('#topleftbox').addClass('boxred');
-      checkWinner();
-    }
-  }
-
-}
-
-function player2Click(square){
-  if (currentPlayer == 2 && square === 'board[0]'){
-    if (board[0] === null){
-      board[0] = 5;
-      $('#topleftbox').addClass('boxred');
-      checkWinner();
-    }
-  }
-
-  else if (currentPlayer == 2 && square === 'board[1]'){
-    if (board[1] === null){
-      board[1] = 5;
-      $('#topleftbox').addClass('boxred');
-      checkWinner();
-    }
-  }
-
-  else if (currentPlayer == 2 && square === 'board[2]'){
-    if (board[2] === null){
-      board[2] = 5;
-      $('#topleftbox').addClass('boxred');
-      checkWinner();
-    }
-  }
-
-  else if (currentPlayer == 2 && square === 'board[3]'){
-    if (board[3] === null){
-      board[3] = 5;
-      $('#topleftbox').addClass('boxred');
-      checkWinner();
-    }
-  }
-
-  else if (currentPlayer == 2 && square === 'board[4]'){
-    if (board[4] === null){
-      board[4] = 5;
-      $('#topleftbox').addClass('boxred');
-      checkWinner();
-    }
-  }
-
-  else if (currentPlayer == 2 && square === 'board[5]'){
-    if (board[5] === null){
-      board[5] = 5;
-      $('#topleftbox').addClass('boxred');
-      checkWinner();
-    }
-  }
-  else if (currentPlayer == 2 && square === 'board[6]'){
-    if (board[6] === null){
-      board[6] = 5;
-      $('#topleftbox').addClass('boxred');
-      checkWinner();
-    }
-  }
-
-  else if (currentPlayer == 2 && square === 'board[7]'){
-    if (board[7] === null){
-      board[7] = 5;
-      $('#topleftbox').addClass('boxred');
-      checkWinner();
-    }
-  }
-
-  else if (currentPlayer == 2 && square === 'board[8]'){
-    if (board[8] === null){
-      board[8] = 5;
-      $('#topleftbox').addClass('boxred');
-      checkWinner();
-    }
-  }
-
-}
-
-
+};
 
 // Determine winner
-var board = [null, null, null,
-             null, null, null,
-             null, null, null];
 
-function checkWinner1() {
-  if (board[0]+ board[1] + board[2] === 15){
-    console.log('User WIN!');
-    playerScore += 1;
-    updatePlayerScore();
+function checkWinner() {
+  if (board[0] + board[1] + board[2] === 15){
+    alert('PLAYER 1 WINS!');
   }
-  else if (board[0]+ board[3] + board[6] === 15) {
-    console.log('User WIN!');
-    playerScore += 1;
-    updatePlayerScore();
+  else if (board[0] + board[3] + board[6] === 15) {
+    alert('PLAYER 1 WINS!');
   }
-  else if (board[1]+ board[4] + board[7] === 15){
-    console.log('User WIN!');
-    playerScore += 1;
-    updatePlayerScore();
+  else if (board[1] + board[4] + board[7] === 15){
+    alert('PLAYER 1 WINS!');
   }
-  else if (board[2]+ board[5] + board[8] === 15){
-    console.log('User WIN!');
-    playerScore += 1;
-    updatePlayerScore();
+  else if (board[2] + board[5] + board[8] === 15){
+    alert('PLAYER 1 WINS!');
   }
-  else if (board[3]+ board[4] + board[5] === 15){
-    console.log('User WIN!');
-    playerScore += 1;
-    updatePlayerScore();
+  else if (board[3] + board[4] + board[5] === 15){
+    alert('PLAYER 1 WINS!');
   }
-  else if (board[6]+ board[4] + board[2] === 15){
-    console.log('User WIN!');
-    playerScore += 1;
-    updatePlayerScore();
+  else if (board[6] + board[4] + board[2] === 15){
+    alert('PLAYER 1 WINS!');
   }
-  else if (board[6]+ board[7] + board[8] === 15){
-    console.log('User WIN!');
-    playerScore += 1;
-    updatePlayerScore();
+  else if (board[6] + board[7] + board[8] === 15){
+    alert('PLAYER 1 WINS!');
   }
-  else if (board[0]+ board[4] + board[8] === 15){
-    console.log('User WIN!');
-    playerScore += 1;
-    updatePlayerScore();
+  else if (board[0] + board[4] + board[8] === 15){
+    alert('PLAYER 1 WINS!');
   }
-
+  else if (board[0] + board[1] + board[2] === 3){
+    alert('PLAYER 2 WINS!');
+    console.log("winner");
   }
+  else if (board[0] + board[3] + board[6] === 3) {
+    alert('PLAYER 2 WINS!');
+  }
+  else if (board[1] + board[4] + board[7] === 3){
+    alert('PLAYER 2 WINS!');
+  }
+  else if (board[2] + board[5] + board[8] === 3){
+    alert('PLAYER 2 WINS!');
+  }
+  else if (board[3] + board[4] + board[5] === 3){
+    alert('PLAYER 2 WINS!');
+  }
+  else if (board[6] + board[4] + board[2] === 3){
+    alert('PLAYER 2 WINS!');
+  }
+  else if (board[6] + board[7] + board[8] === 3){
+    alert('PLAYER 2 WINS!');
+  }
+  else if (board[0] + board[4] + board[8] === 3){
+    alert('PLAYER 2 WINS!');
+  }
+  else if (board[0] + board[1] + board[2] + board[3] + board[4] + board[5] + board[6] + board[7]+ board[8] === 29) {
+    alert('The game was a tie. Try again!');
+  }
+};
 
 
 
+//Reset Board
 
-
-// function firstToFive() {
-
-// }
-// // // User has 3 objects in a row and wins
-// //   // if user has three Os in a row
-
-//   // arrays of groups to determine who has won
-//     // 8 groups of 3 squares to determine who has won
-
-//     /* Act on the event */
-//   // });
-// //   //   user has won
-// // // user clicks on a space taken and cant add their objects
-// //     // if user clicks on square with an x or o
-
-
-
-// function resetGame () {
-
-// }
-
-
-// // // user clicks button to start new game
-// //     if user clicks on reset button, begins new game
-
-// $("#button1").click(function() {
-//     $('.bottomright').remove('img src="http://vignette2.wikia.nocookie.net/disney/images/3/36/Captain_America_Shield.png/revision/latest?cb=20140922001028" />')
-// });
+function resetBoard() {
+  $("#button1").click(function(){
+    $("td img").remove();
+    board = ['square1', 'square2', 'square3',
+             "square4", "square5", "square6",
+             "square7", "square8", "square9"];
+    currentPlayer = 1;
+  })
+}
+resetBoard();
 
