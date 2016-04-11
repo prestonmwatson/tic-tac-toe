@@ -1,16 +1,23 @@
-//The first player to go will be Captain America and will display the shield icon
+//The first player to go will be player 1 and their icon will display the shield icon
 
 //The first player will begin and click on any square
 
-// User clicks on button under either Cap or Ironman, which will then set them as either player 1 (cap) or player 2 (ironman).
-    //Based on if they are player 1 or player 2, that image will be placed in the square when they click on it.
+//It will then alternate to player 2 and will display the ironman icon when they click on a square
 
+//There will need to be three in a row of the same icon for either player 1 or player 2 to win
+
+//If the game is a tie, then the board will reset and they can play again
+
+//After a winner is determined, the board will reset and the players can play again
 
 var currentPlayer = 1;
 
 var board = ['square1', 'square2', 'square3',
              "square4", "square5", "square6",
              "square7", "square8", "square9"];
+
+var player1Wins = 0;
+var player2Wins = 0;
 
 // Switch Player Function
 function switchPlayer(buttonClickedId) {
@@ -25,7 +32,6 @@ function switchPlayer(buttonClickedId) {
 };
 
 
-//Function to check if square is available
 
 // Show image
 function showImage() {
@@ -34,18 +40,19 @@ function showImage() {
   }
 };
 
+//Function to check if square is available
+
 function checkSquareAvailability(square) {
   if (!square.innerHTML) {
     showImage();
   } else {
-    return alert("This square has already been selected. Choose again.");
+    alert("This square has already been selected. Choose again.");
   }
 }
 
 
 function playerMove(square, location) {
 checkSquareAvailability(square);
-location.innerHTML = showImage();
 playerClick(square);
 };
 
@@ -111,6 +118,7 @@ var square9 = $(".bottomright");
   checkWinner();
   switchPlayer();
 });
+
 
 //player moves
 function playerClick(square){
@@ -226,75 +234,117 @@ function playerClick(square){
   }
 };
 
+
 // Determine winner
 
 function checkWinner() {
   if (board[0] + board[1] + board[2] === 15){
     alert('PLAYER 1 WINS!');
+    player1Wins += 1;
+    resetBoard();
   }
   else if (board[0] + board[3] + board[6] === 15) {
     alert('PLAYER 1 WINS!');
+    player1Wins += 1;
+    resetBoard();
   }
   else if (board[1] + board[4] + board[7] === 15){
     alert('PLAYER 1 WINS!');
+    player1Wins += 1;
+    resetBoard();
   }
   else if (board[2] + board[5] + board[8] === 15){
     alert('PLAYER 1 WINS!');
+    player1Wins += 1;
+    resetBoard();
   }
   else if (board[3] + board[4] + board[5] === 15){
     alert('PLAYER 1 WINS!');
+    player1Wins += 1;
+    resetBoard();
   }
   else if (board[6] + board[4] + board[2] === 15){
     alert('PLAYER 1 WINS!');
+    player1Wins += 1;
+    resetBoard();
   }
   else if (board[6] + board[7] + board[8] === 15){
     alert('PLAYER 1 WINS!');
+    player1Wins += 1;
+    resetBoard();
   }
   else if (board[0] + board[4] + board[8] === 15){
     alert('PLAYER 1 WINS!');
+    player1Wins += 1;
+    resetBoard();
   }
   else if (board[0] + board[1] + board[2] === 3){
     alert('PLAYER 2 WINS!');
-    console.log("winner");
+    player2Wins += 1;
+    resetBoard();
   }
   else if (board[0] + board[3] + board[6] === 3) {
     alert('PLAYER 2 WINS!');
+    player2Wins += 1;
+    resetBoard();
   }
   else if (board[1] + board[4] + board[7] === 3){
     alert('PLAYER 2 WINS!');
+    player2Wins += 1;
+    resetBoard();
   }
   else if (board[2] + board[5] + board[8] === 3){
     alert('PLAYER 2 WINS!');
+    player2Wins += 1;
+    resetBoard();
   }
   else if (board[3] + board[4] + board[5] === 3){
     alert('PLAYER 2 WINS!');
+    player2Wins += 1;
+    resetBoard();
   }
   else if (board[6] + board[4] + board[2] === 3){
     alert('PLAYER 2 WINS!');
+    player2Wins += 1;
+    resetBoard();
   }
   else if (board[6] + board[7] + board[8] === 3){
     alert('PLAYER 2 WINS!');
+    player2Wins += 1;
+    resetBoard();
   }
   else if (board[0] + board[4] + board[8] === 3){
     alert('PLAYER 2 WINS!');
+    player2Wins += 1;
+    resetBoard();
   }
   else if (board[0] + board[1] + board[2] + board[3] + board[4] + board[5] + board[6] + board[7]+ board[8] === 29) {
     alert('The game was a tie. Try again!');
+    resetBoard();
+  }
+  else if (board[0] + board[1] + board[2] + board[3] + board[4] + board[5] + board[6] + board[7]+ board[8] === 25) {
+    alert('The game was a tie. Try again!');
+    resetBoard();
   }
 };
 
-
-
 //Reset Board
-
 function resetBoard() {
-  $("#button1").click(function(){
-    $("td img").remove();
-    board = ['square1', 'square2', 'square3',
-             "square4", "square5", "square6",
-             "square7", "square8", "square9"];
-    currentPlayer = 1;
-  })
+  $("td img").remove();
+  board = ['square1', 'square2', 'square3',
+           "square4", "square5", "square6",
+           "square7", "square8", "square9"];
 }
 resetBoard();
+
+//reset button resets board
+$("#button1").click(function(){
+  $("td img").remove();
+  board = ['square1', 'square2', 'square3',
+           "square4", "square5", "square6",
+           "square7", "square8", "square9"];
+  currentPlayer = 1;
+})
+
+// function countWins() {
 
