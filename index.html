@@ -1,15 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
   <meta charset="UTF-8">
-  <title>Tic-Tac-Toe</title
+  <title>Tic-Tac-Toe|Captain America</title>
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/foundation/6.2.0/foundation.min.css">
+   <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
+
 </head>
 <body>
-  <h1>
+  <div class="headerone">
+    <h1 class="h1">
+      Captain America: Civil War Tic-Tac-Toe
+    </h1>
+  </div>
+      <div id="headertwo">
+        <h2>
+            <span><img class="shield" src="https://s-media-cache-ak0.pinimg.com/736x/53/94/bf/5394bf048c9fd2afae4327a1a6b54490.jpg"></span>
+              Whose side are you on?
+            <span><img class="shield" src="http://ecx.images-amazon.com/images/I/612orNhcKnL._SL1500_.jpg"></span>
+        </h2>
+      </div>
 
-  </h1>
-    <p>
+    <div id="listdiv">
+      <div class="list">
+        <h3>
+           <span><img id="ironman1" src="http://all4desktop.com/data_images/original/4243202-iron-man.jpg"></span>
+           Rules
+           <span><img id="cap1" src="http://all4desktop.com/data_images/original/4246066-captain-america.jpg"></span>
+           </h3>
+            <ol>
+              <li>The object of Tic Tac Toe is to get three in a row.</li>
+              <li>If there are two players, the youngest goes first.</li>
+              <li>First player begins by selecting which square they want to claim and click on that square.</li>
+              <li>Alternate turns claiming squares until either oppent has three in a row or all nine squares are filled.</li>
+              <li>If a stalemate occurs, click reset and begin again.</li>
+              <li>Best of 5 games, wins.</li>
+            </ol>
+          </div>
+    </div>
 
-    </p>
+<section id="main">
+       <img id="iron2" src="http://vignette3.wikia.nocookie.net/marvelmovies/images/a/a4/Civil_War_Full_Body_08.png/revision/latest/scale-to-width-down/613?cb=20160326231158">
+       <img id="cap2" src="http://vignette3.wikia.nocookie.net/marvelcinematicuniverse/images/6/67/Captain_America_TWS-flying_air_kick.png/revision/latest?cb=20150411122733">
+    <div class="row">
+        <div class="small-2 large-2 columns">
+          <div id="button2">
+              <!-- <a class=" button ">Choose Captain America's team!</a> -->
+          </div>
+        </div>
+            <section class="gameboard">
+               <div id="board">
+                 <table>
+                  <tbody id="borders">
+                    <tr id="row1">
+                       <td class="square topleft"></td>
+                       <td class="square vertical topmiddle"></td>
+                       <td class="square topright"></td>
+                    </tr>
+                    <tr id="row2">
+                        <td class="square horizontal middleleft"></td>
+                        <td class="square vertical horizontal middlemiddle"></td>
+                        <td class="square horizontal middleright"></td>
+                    </tr>
+                    <tr id="row3">
+                       <td class="square bottomleft"></td>
+                       <td class="square vertical bottommiddle"></td>
+                       <td class="square bottomright"></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+                <div id="button1">
+                  <a class=" button">Reset the Game!</a>
+                </div>
+          </section>
+        </div>
+        <div class="small-2 large-2 columns">
+          <div id="button3">
+            <!-- <a class=" button ">Choose Ironman's team!</a> -->
+          </div>
+        </div>
+    </div>
+
+      <div class="score">
+        <ul id="players">
+          <li class="bottomtext">Player 1</li>
+          <li class="bottomtext">Player 2</li>
+          <li class="bottomtext">Ties</li>
+        </ul>
+      </div>
+
+  </section>
+  <footer>
+
+  </footer>
+
+  <script src="javascript/script.js"></script>
+
 </body>
 </html>
